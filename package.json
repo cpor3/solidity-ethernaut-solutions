@@ -1,0 +1,35 @@
+{
+  "name": "solidity-ethernaut-solutions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "d": "npx hardhat run --network goerli scripts/ddd.ts --pep",
+    "test-coinFlip": "npx hardhat test test/CoinFlip.ts --network localhost",
+    "test-delegateCall": "npx hardhat test test/DelegateCall.ts --network localhost",
+    "test-force": "npx hardhat test test/Force.ts --network localhost",
+    "test-king": "npx hardhat test test/King.ts --network localhost",
+    "test-token": "npx hardhat test test/Token.ts --network localhost",
+    "test-reentrancy": "npx hardhat test test/Reentrancy.ts",
+
+    "deploy": "npx hardhat run scripts/deployMain.ts --network localhost",
+    "deploy_blockchain": "npx hardhat run scripts/deployMain.ts --network goerli",
+
+    "triggerForce": "npx hardhat run scripts/runTriggerForce.ts --network goerli",
+    "king": "npx hardhat run scripts/runKing.ts --network goerli",
+    "forceEther": "npx hardhat run scripts/runForceEther.ts --network goerli",
+    "reentrancy": "npx hardhat run scripts/runReentrancy.ts --network goerli"
+  },
+  "keywords": [],
+  "author": "github.com/cpor3",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-chai-matchers": "^1.0.5",
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.12.6"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.2",
+    "dotenv": "^16.0.3"
+  }
+}
